@@ -16,7 +16,7 @@ const ProjectCard = (props: ProjectCardProps) => {
           src={imageSrc}
           alt={title}
           fill
-          className="object-cover rounded-lg" // or object-cover
+          className="object-cover rounded-lg"
           sizes="(max-width: 768px) 100vw, 400px"
           priority={false}
         />
