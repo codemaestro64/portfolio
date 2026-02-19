@@ -15,10 +15,9 @@ const ContributionCard = (props: ContributionCardProps) => {
       className="relative p-6 rounded-xl bg-surface border"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: index * 0.015, ease: "easeOut" }}
+      transition={{ duration: 0.6, delay: index * 0.15, ease: "easeOut" }}
       viewport={{ once: true }}
     >
-      
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center gap-3">
           <div className="p-2 rounded-lg bg-accent">

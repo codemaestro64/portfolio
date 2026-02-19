@@ -26,6 +26,7 @@ const ProjectsSection = () => {
           {projectData.items.map((project, i) => (
             <ProjectCard 
               key={project.href ?? i} 
+              index={i}
               {...project}
             />
           ))}

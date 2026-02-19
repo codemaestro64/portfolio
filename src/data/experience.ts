@@ -1,8 +1,10 @@
+import { Experience } from "@/types"
+
 const label = "02. Experience"
 const title = "Where I've Worked"
 const subtitle = "A journey through innovative companies where I've made meaningful impact."
 
-const experiences = [{
+const experiences: Experience[] = [{
   title: "Senior Frontend Engineer",
   company: "Vistar Media",
   companyURL: "https://www.google.com",

@@ -13,3 +13,13 @@ export interface Contribution {
   tags: string[]
   href: string
 }
+
+export interface Experience {
+  title: string 
+  company: string 
+  companyURL: string 
+  period: string 
+  location: string 
+  bullets: string[]
+  tags: string[]
+}

@@ -1,16 +1,27 @@
+'use client'
+
+import { motion } from "framer-motion"
 import Tag from "@/components/Tag"
 import type { Project } from "@/types"
 import { Link } from "lucide-react"
 import Image from "next/image"
 
 
-type ProjectCardProps = Project
+type ProjectCardProps = Project & {
+  index: number
+}
 
 const ProjectCard = (props: ProjectCardProps) => {
-  const { title, imageSrc, href, description, tags } = props
+  const { title, imageSrc, href, description, tags, index } = props
   
   return (
-    <div className="p-6 rounded-xl bg-surface border border-light overflow-hidden">
+    <motion.div 
+      className="relative p-6 rounded-xl bg-surface border overflow-hidden"
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: index * 0.15, ease: "easeOut" }}
+      viewport={{ once: true }}
+    >
       <div className="h-40 rounded-lg mb-6 flex items-center justify-center relative">
         <Image
           src={imageSrc}
@@ -44,7 +55,7 @@ const ProjectCard = (props: ProjectCardProps) => {
           <span>Visit Website</span>
         </a>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

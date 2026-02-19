@@ -24,7 +24,11 @@ const ExperienceSection = () => {
         {/* Timeline */}
         <div className="space-y-12">
           {experienceData.experiences.map((exp, i) => (
-            <ExperienceCard key={i} exp={exp} index={i} />
+            <ExperienceCard 
+              key={i} 
+              index={i} 
+              {...exp}
+            />
           ))}
         </div>
       </motion.div>

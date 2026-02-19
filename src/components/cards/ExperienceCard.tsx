@@ -3,13 +3,20 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import Tag from "@/components/Tag";
+import { Experience } from "@/types";
 
-const ExperienceCard = ({ exp, index }: { exp: any; index: number }) => {
+type ExperienceCardProps = Experience & {
+  index: number
+}
+
+const ExperienceCard = (props: ExperienceCardProps) => {
+  const { title, company, companyURL, period, location, bullets, tags, index } = props
+
   const [showAll, setShowAll] = useState(false)
 
   const toggleShow = () => setShowAll((prev) => !prev)
 
-  const bulletsToShow = showAll ? exp.bullets : exp.bullets.slice(0, 2)
+  const bulletsToShow = showAll ? bullets : bullets.slice(0, 2)
 
   return (
     <motion.div
@@ -37,11 +44,11 @@ const ExperienceCard = ({ exp, index }: { exp: any; index: number }) => {
       >
         <div className="flex flex-wrap justify-between items-start gap-4 mb-4">
           <div>
-            <h3 className="font-display text-xl font-semibold">{exp.title}</h3>
-            <p className="text-accent font-medium">{exp.company}</p>
+            <h3 className="font-display text-xl font-semibold">{title}</h3>
+            <p className="text-accent font-medium">{company}</p>
           </div>
           <span className="font-mono text-sm text-muted-foreground px-3 py-1 rounded-full bg-card">
-            {exp.period}
+            {period}
           </span>
         </div>
 
@@ -64,7 +71,7 @@ const ExperienceCard = ({ exp, index }: { exp: any; index: number }) => {
         </ul>
 
         {/* Show more / less button */}
-        {exp.bullets.length > 2 && (
+        {bullets.length > 2 && (
           <button
             onClick={toggleShow}
             className="flex items-center gap-1 text-sm text-primary font-medium mt-2 hover:underline"
@@ -76,7 +83,7 @@ const ExperienceCard = ({ exp, index }: { exp: any; index: number }) => {
 
         {/* Tags */}
         <div className="flex flex-wrap gap-2 mt-4">
-          {exp.tags.map((tag: string, i: number) => (
+          {tags.map((tag: string, i: number) => (
             <Tag 
               key={i} 
               index={i} 
