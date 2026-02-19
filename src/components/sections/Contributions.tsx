@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import contributionData from "@/data/contributions"
+import SectionHeader from "@/components/SectionHeader"
 import ContributionCard from "@/components/cards/ContributionCard"
 
 const ContributionsSection = () => {
@@ -15,12 +16,13 @@ const ContributionsSection = () => {
         viewport={{ once: true, margin: "-100px" }}
       >
         {/* Header */}
-        <div className="text-center mb-16">
-          <span className="inline-block font-mono text-sm text-accent mb-4">{contributionData.label}</span>
-          <h2 className="font-display text-3xl sm:text-4xl font-bold mb-4">{contributionData.title}</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">{contributionData.subtitle}</p>
-        </div>
-
+        <SectionHeader 
+          title={contributionData.title}
+          label={contributionData.label}
+          subtitle={contributionData.subtitle}
+        />
+  
+        {/* Contributions */}
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
           {contributionData.items.map((contribution, i) => (
             <ContributionCard 

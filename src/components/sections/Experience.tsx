@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import experienceData from "@/data/experience"
+import SectionHeader from "@/components/SectionHeader"
 import ExperienceCard from "@/components/cards/ExperienceCard"
 
 const ExperienceSection = () => {
@@ -15,11 +16,11 @@ const ExperienceSection = () => {
         viewport={{ once: true, margin: "-100px" }}
       >
         {/* Header */}
-        <div className="text-center mb-16">
-          <span className="inline-block font-mono text-sm text-accent mb-4">{experienceData.label}</span>
-          <h2 className="font-display text-3xl sm:text-4xl font-bold mb-4">{experienceData.title}</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">{experienceData.subtitle}</p>
-        </div>
+        <SectionHeader 
+          title={experienceData.title}
+          label={experienceData.label}
+          subtitle={experienceData.subtitle}
+        />
 
         {/* Timeline */}
         <div className="space-y-12">

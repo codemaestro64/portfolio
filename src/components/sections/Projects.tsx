@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion"
 import projectData from "@/data/projects"
+import SectionHeader from "@/components/SectionHeader"
 import ProjectCard from "@/components/cards/ProjectCard"
-
 
 const ProjectsSection = () => {
   return (
@@ -16,12 +16,13 @@ const ProjectsSection = () => {
         viewport={{ once: true, margin: "-100px" }}
       >
         {/* Header */}
-        <div className="text-center mb-16">
-          <span className="inline-block font-mono text-sm text-accent mb-4">{projectData.label}</span>
-          <h2 className="font-display text-3xl sm:text-4xl font-bold mb-4">{projectData.title}</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">{projectData.subtitle}</p>
-        </div>
+        <SectionHeader 
+          title={projectData.title}
+          label={projectData.label}
+          subtitle={projectData.subtitle}
+        />
 
+        {/* Projects */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projectData.items.map((project, i) => (
             <ProjectCard 
