@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
+import { HOME_LINK_TEXT } from '@/data'
 
 const navLinks = [
   { name: 'About', href: '#about' },
@@ -50,7 +51,7 @@ const Navbar = () => {
             href="#"
             className="font-mono font-semibold text-lg gradient-text"
           >
-            dev
+            {HOME_LINK_TEXT}
           </a>
 
           {/* Desktop Navigation */}

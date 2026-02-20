@@ -1,3 +1,5 @@
+import { HOME_LINK_TEXT } from "@/data"
+
 const Footer = () => {
   return (
     <footer className="py-6 sm:py-8 border-t">
@@ -8,7 +10,7 @@ const Footer = () => {
           </p>
 
           <p className="text-xs sm:text-sm text-muted-foreground font-mono">
-            mseze.dev
+            {HOME_LINK_TEXT}
           </p>
         </div>
       </div>

@@ -17,3 +17,4 @@ export const SOCIALS = [{
 }]
 
 export const BASE_URL = "https://mseze.vercel.app"
+export const HOME_LINK_TEXT = "<mseze.dev />"

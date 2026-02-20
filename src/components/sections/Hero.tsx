@@ -93,9 +93,10 @@ const HeroSection = () => {
               leading-relaxed
             "
           >
-            I architect and build high-performance web platforms at scale.
-            Specializing in React ecosystems, design systems, and developer tooling
-            — turning complex engineering challenges into elegant, maintainable solutions.
+            I architect and build high-performance, scalable web platforms end-to-end.
+            Specializing in full-stack systems, distributed and blockchain-based applications,
+            and developer tooling—turning complex engineering challenges into elegant,
+            maintainable solutions.
           </motion.p>
 
           {/* Meta */}
