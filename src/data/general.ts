@@ -16,3 +16,4 @@ export const SOCIALS = [{
   href: "https://twitter.com/mseze"
 }]
 
+export const BASE_URL = "https://mseze.vercel.app"

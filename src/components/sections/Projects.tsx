@@ -1,9 +1,15 @@
 'use client'
 
+import type { Metadata } from "next";
 import { motion } from "framer-motion"
 import projectData from "@/data/projects"
 import SectionHeader from "@/components/SectionHeader"
 import ProjectCard from "@/components/cards/ProjectCard"
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description: "Selected software projects by Michael Eze",
+}
 
 const ProjectsSection = () => {
   return (
