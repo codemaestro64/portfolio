@@ -3,6 +3,7 @@ import { Github, Linkedin, Twitter } from "lucide-react";
 
 export const LOCATION = "Abuja, Nigeria"
 export const EMAIL = "mseze.dev@gmail.com"
+export const PHONE = "+2348144904114"
 
 export const SOCIALS = [{
   icon: Github,
@@ -14,3 +15,4 @@ export const SOCIALS = [{
   icon: Twitter,
   href: "https://twitter.com/mseze"
 }]
+

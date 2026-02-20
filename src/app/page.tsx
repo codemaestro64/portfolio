@@ -3,6 +3,7 @@ import AboutSection from "@/components/sections/About";
 import ExperienceSection from "@/components/sections/Experience";
 import ProjectsSection from "@/components/sections/Projects";
 import ContributionsSection from "@/components/sections/Contributions";
+import ContactSection from "@/components/sections/Contact";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <ExperienceSection />
       <ProjectsSection />
       <ContributionsSection />
+      <ContactSection />
     </div>
   );
 }

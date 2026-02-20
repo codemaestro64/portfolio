@@ -89,7 +89,7 @@ const AboutSection = () => {
                 className="glass-card-elevated rounded-2xl bg-surface border-primary/30 p-8"
                 style={{ boxShadow: "var(--shadow-glow)" }}
               >
-                <div className="grid grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                   {about.stats.map((stat, i) => (
                     <motion.div
                       key={i}
@@ -106,7 +106,7 @@ const AboutSection = () => {
                       <div className="font-display text-4xl font-bold gradient-text mb-2">
                         {stat.stat}
                       </div>
-                      <div className="text-sm text-muted-foreground">
+                      <div className="text-sm text-muted-foreground uppercase tracking-tight">
                         {stat.title}
                       </div>
                     </motion.div>

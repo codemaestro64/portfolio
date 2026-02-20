@@ -12,36 +12,44 @@ const ContributionCard = (props: ContributionCardProps) => {
   
   return (
     <motion.div 
-      className="relative p-6 rounded-xl bg-surface border"
+      className="relative p-4 sm:p-6 rounded-xl bg-surface border"
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.15, ease: "easeOut" }}
       viewport={{ once: true }}
     >
-      <div className="flex items-start justify-between mb-4">
+      {/* Header */}
+      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
         <div className="flex items-center gap-3">
-          <div className="p-2 rounded-lg bg-accent">
+          <div className="p-2 rounded-lg bg-accent shrink-0">
             <Github size={15} />
           </div>
           <div>
-            <h3 className="font-display font-semibold">{title}</h3>
-            <p className="text-sm text-muted-foreground">{type}</p>
+            <h3 className="font-display font-semibold text-sm sm:text-base">
+              {title}
+            </h3>
+            <p className="text-xs sm:text-sm text-muted-foreground">
+              {type}
+            </p>
           </div>
         </div>
-        <div className="flex items-center gap-1 text-sm">
-          <a 
-            href={href} 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm text-blue-600 hover:underline inline-flex items-center gap-2"
-          >
-            <span>View on GitHub</span>
-            <ArrowRight size={13} />
-          </a>
-        </div>
+
+        {/* Link */}
+        <a 
+          href={href} 
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs sm:text-sm text-blue-600 hover:underline inline-flex items-center gap-2 w-fit"
+        >
+          <span>View on GitHub</span>
+          <ArrowRight size={13} />
+        </a>
       </div>
 
-      <p className="text-sm text-muted-foreground mb-4">{description}</p>
+      {/* Description */}
+      <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+        {description}
+      </p>
       
       {/* Tags */}
       <div className="flex flex-wrap gap-2 mt-4">
