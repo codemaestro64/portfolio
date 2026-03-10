@@ -8,7 +8,7 @@ const experiences: Experience[] = [{
   title: "Senior Frontend Engineer",
   company: "Vistar Media",
   companyURL: "https://www.vistamedia.com",
-  period: "Sep 2022 - Apr 2025",
+  period: "Sep 2022 - Jan 2026",
   location: "USA (Remote)",
   bullets: [
     "Developed a responsive web application that increased user engagement by 30% through optimised user interface and experience design.",
@@ -16,7 +16,7 @@ const experiences: Experience[] = [{
     "Drove Core Web Vitals improvements — LCP from 4.2s to 1.1s, CLS from 0.25 to 0.02 across the product suite",
     "Automated deployment processes using Docker, streamlining releases and reducing downtime by 30%.",
   ],
-  tags: ["React", "TypeScript", "PHP", "Go", "Python", "Node.js"]
+  tags: ["React", "Next.js", "TypeScript", "PHP", "Go", "Python", "Node.js"]
 }, {
   title: "Software Engineer",
   company: "Pluto Health",

@@ -6,6 +6,13 @@ const subtitle = "Giving back to the community through open source contributions
 
 const items: Contribution[] = [
   {
+    title: "Vesper",
+    type: "No Code Smart Contract Builder",
+    description: "Vesper is an open-source, no-code Solidity smart contract builder for the Web3 ecosystem.",
+    tags: ["Next.js", "React.js", "Solidity", "Web3"],
+    href: "https://github.com/codemaestro64/vesper"
+  },
+  {
     title: "Flux",
     type: "Distributed System",
     description: "CP-consistent distributed rate limiting in Go. Uses Hashicorp Raft for log replication and gRPC streams for high-performance node communication.",
