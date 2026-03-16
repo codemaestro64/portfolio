@@ -9,7 +9,8 @@ type ExperienceCardProps = Experience & {
 };
 
 const ExperienceCard = (props: ExperienceCardProps) => {
-  const { title, company, period, bullets, tags, index } = props;
+  const { title, company, period, bullets, techTags, conceptTags, index } =
+    props;
 
   const [showAll, setShowAll] = useState(false);
   const toggleShow = () => setShowAll((prev) => !prev);
@@ -61,7 +62,7 @@ const ExperienceCard = (props: ExperienceCardProps) => {
         </div>
 
         {/* Bullets */}
-        <ul className="space-y-2 mb-2">
+        <motion.ul className="space-y-2 mb-2">
           <AnimatePresence initial={false}>
             {bulletsToShow.map((bullet, j) => (
               <motion.li
@@ -77,7 +78,7 @@ const ExperienceCard = (props: ExperienceCardProps) => {
               </motion.li>
             ))}
           </AnimatePresence>
-        </ul>
+        </motion.ul>
 
         {/* Show more / less */}
         {bullets.length > 2 && (
@@ -90,11 +91,24 @@ const ExperienceCard = (props: ExperienceCardProps) => {
           </button>
         )}
 
-        {/* Tags */}
-        <div className="flex flex-wrap gap-2 mt-4">
-          {tags.map((tag, i) => (
-            <Tag key={i} index={i} tag={tag} />
-          ))}
+        {/* Tech Tags */}
+        <div className="mt-4">
+          <span className="text-sm">Tech:</span>
+          <div className="flex flex-wrap gap-2 mt-2">
+            {techTags.map((tag, i) => (
+              <Tag key={i} index={i} tag={tag} xs />
+            ))}
+          </div>
+        </div>
+
+        {/* Concept Tags */}
+        <div className="mt-4">
+          <span className="text-sm">Concepts:</span>
+          <div className="flex flex-wrap gap-2 mt-2">
+            {conceptTags.map((tag, i) => (
+              <Tag key={i} index={i} tag={tag} xs />
+            ))}
+          </div>
         </div>
       </motion.div>
     </motion.div>

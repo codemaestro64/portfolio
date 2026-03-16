@@ -21,5 +21,6 @@ export interface Experience {
   period: string 
   location: string 
   bullets: string[]
-  tags: string[]
+  techTags: string[]
+  conceptTags: string[]
 }
